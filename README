@@ -10,9 +10,19 @@ Thread.cpp -- a file with implementation of Thread class
 ANSWERS:
 
 Q1:
+A program that handles with a numerous independent data structures, and has a very few system calls.
+The reason that user level threads are a reasonable option for this kind of program is that the structures
+are not related, therefore we can switch missions without losing information.
+In addition there are no system calls that block the whole process.
 
 Q2:
+Advantages - each tab is independent and safe from other tabs.
+Disadavantages - high overhead, communication between tabs is less efficient
 
 Q3:
 
+
 Q4:
+Virtual time - the time that each thread\process actually runs on the CPU
+Real time - the actual time that passes
+For instance, in our program the virtual time doesn't include the time that we switch threads or have system calls.
